@@ -11,7 +11,66 @@
 		771E488D27A08A81000F220D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E488C27A08A81000F220D /* ViewController.swift */; };
 		771E488F27A08A83000F220D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771E488E27A08A83000F220D /* Assets.xcassets */; };
 		771E489227A08A83000F220D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771E489027A08A83000F220D /* Main.storyboard */; };
+		771E48B627A0905F000F220D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E48B527A0905F000F220D /* AppDelegate.swift */; };
+		771E48B827A0905F000F220D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E48B727A0905F000F220D /* SceneDelegate.swift */; };
+		771E48BA27A0905F000F220D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E48B927A0905F000F220D /* ViewController.swift */; };
+		771E48BD27A0905F000F220D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771E48BB27A0905F000F220D /* Main.storyboard */; };
+		771E48BF27A09061000F220D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771E48BE27A09061000F220D /* Assets.xcassets */; };
+		771E48C227A09061000F220D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771E48C027A09061000F220D /* LaunchScreen.storyboard */; };
+		771E48E627A0CAE6000F220D /* LiveViewKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 771E48E527A0CAE6000F220D /* LiveViewKit.docc */; };
+		771E48F427A0CAE6000F220D /* LiveViewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E48E427A0CAE6000F220D /* LiveViewKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		771E48F727A0CAE6000F220D /* LiveViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */; };
+		771E48F827A0CAE6000F220D /* LiveViewKit.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		771E490127A0CD5A000F220D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E490027A0CD5A000F220D /* CoreFoundation.framework */; };
+		771E490727A0CDD7000F220D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E490627A0CDD7000F220D /* IOKit.framework */; };
+		771E490E27A0CE2E000F220D /* LiveViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */; };
+		771E491027A0CEE7000F220D /* LiveViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E490F27A0CEE7000F220D /* LiveViewDemo.swift */; };
+		771E491327A0CEF9000F220D /* uvc_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 771E491127A0CEF8000F220D /* uvc_example.c */; };
+		771E491427A0CEF9000F220D /* uvc_example.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491227A0CEF8000F220D /* uvc_example.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		771E491B27A0D477000F220D /* testlibusb.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491927A0D477000F220D /* testlibusb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		771E491C27A0D477000F220D /* testlibusb.c in Sources */ = {isa = PBXBuildFile; fileRef = 771E491A27A0D477000F220D /* testlibusb.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		771E48F527A0CAE6000F220D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 771E487F27A08A81000F220D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 771E48E127A0CAE6000F220D;
+			remoteInfo = LiveViewKit;
+		};
+		771E490C27A0CE29000F220D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 771E487F27A08A81000F220D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 771E48E127A0CAE6000F220D;
+			remoteInfo = LiveViewKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		771E48A727A08B89000F220D /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771E48D427A09128000F220D /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				771E48F827A0CAE6000F220D /* LiveViewKit.framework in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		771E488727A08A81000F220D /* LiveView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +79,25 @@
 		771E488E27A08A83000F220D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		771E489127A08A83000F220D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		771E489327A08A83000F220D /* LiveView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveView.entitlements; sourceTree = "<group>"; };
+		771E48B327A0905F000F220D /* LiveView-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LiveView-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		771E48B527A0905F000F220D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		771E48B727A0905F000F220D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		771E48B927A0905F000F220D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		771E48BC27A0905F000F220D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		771E48BE27A09061000F220D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		771E48C127A09061000F220D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		771E48C327A09061000F220D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		771E48E227A0CAE6000F220D /* LiveViewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LiveViewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		771E48E427A0CAE6000F220D /* LiveViewKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LiveViewKit.h; sourceTree = "<group>"; };
+		771E48E527A0CAE6000F220D /* LiveViewKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LiveViewKit.docc; sourceTree = "<group>"; };
+		771E490027A0CD5A000F220D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		771E490627A0CDD7000F220D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		771E490F27A0CEE7000F220D /* LiveViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewDemo.swift; sourceTree = "<group>"; };
+		771E491127A0CEF8000F220D /* uvc_example.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uvc_example.c; sourceTree = "<group>"; };
+		771E491227A0CEF8000F220D /* uvc_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uvc_example.h; sourceTree = "<group>"; };
+		771E491927A0D477000F220D /* testlibusb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testlibusb.h; sourceTree = "<group>"; };
+		771E491A27A0D477000F220D /* testlibusb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testlibusb.c; sourceTree = "<group>"; };
+		771E491D27A0DF13000F220D /* LiveView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveView.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +105,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771E490E27A0CE2E000F220D /* LiveViewKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771E48B027A0905F000F220D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E48F727A0CAE6000F220D /* LiveViewKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771E48DF27A0CAE6000F220D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E490127A0CD5A000F220D /* CoreFoundation.framework in Frameworks */,
+				771E490727A0CDD7000F220D /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,7 +133,10 @@
 			isa = PBXGroup;
 			children = (
 				771E488927A08A81000F220D /* LiveView */,
+				771E48B427A0905F000F220D /* LiveView-iOS */,
+				771E48E327A0CAE6000F220D /* LiveViewKit */,
 				771E488827A08A81000F220D /* Products */,
+				771E489D27A08B89000F220D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				771E488727A08A81000F220D /* LiveView.app */,
+				771E48B327A0905F000F220D /* LiveView-iOS.app */,
+				771E48E227A0CAE6000F220D /* LiveViewKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,7 +162,58 @@
 			path = LiveView;
 			sourceTree = "<group>";
 		};
+		771E489D27A08B89000F220D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				771E490627A0CDD7000F220D /* IOKit.framework */,
+				771E490027A0CD5A000F220D /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		771E48B427A0905F000F220D /* LiveView-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				771E48B527A0905F000F220D /* AppDelegate.swift */,
+				771E48B727A0905F000F220D /* SceneDelegate.swift */,
+				771E48B927A0905F000F220D /* ViewController.swift */,
+				771E48BE27A09061000F220D /* Assets.xcassets */,
+				771E48BB27A0905F000F220D /* Main.storyboard */,
+				771E491D27A0DF13000F220D /* LiveView.entitlements */,
+				771E48C027A09061000F220D /* LaunchScreen.storyboard */,
+				771E48C327A09061000F220D /* Info.plist */,
+			);
+			path = "LiveView-iOS";
+			sourceTree = "<group>";
+		};
+		771E48E327A0CAE6000F220D /* LiveViewKit */ = {
+			isa = PBXGroup;
+			children = (
+				771E490F27A0CEE7000F220D /* LiveViewDemo.swift */,
+				771E491227A0CEF8000F220D /* uvc_example.h */,
+				771E491127A0CEF8000F220D /* uvc_example.c */,
+				771E491927A0D477000F220D /* testlibusb.h */,
+				771E491A27A0D477000F220D /* testlibusb.c */,
+				771E48E427A0CAE6000F220D /* LiveViewKit.h */,
+				771E48E527A0CAE6000F220D /* LiveViewKit.docc */,
+			);
+			path = LiveViewKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		771E48DD27A0CAE6000F220D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E491B27A0D477000F220D /* testlibusb.h in Headers */,
+				771E48F427A0CAE6000F220D /* LiveViewKit.h in Headers */,
+				771E491427A0CEF9000F220D /* uvc_example.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		771E488627A08A81000F220D /* LiveView */ = {
@@ -71,15 +223,54 @@
 				771E488327A08A81000F220D /* Sources */,
 				771E488427A08A81000F220D /* Frameworks */,
 				771E488527A08A81000F220D /* Resources */,
+				771E48A727A08B89000F220D /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				771E490D27A0CE29000F220D /* PBXTargetDependency */,
 			);
 			name = LiveView;
 			productName = LiveView;
 			productReference = 771E488727A08A81000F220D /* LiveView.app */;
 			productType = "com.apple.product-type.application";
+		};
+		771E48B227A0905F000F220D /* LiveView-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 771E48C627A09061000F220D /* Build configuration list for PBXNativeTarget "LiveView-iOS" */;
+			buildPhases = (
+				771E48AF27A0905F000F220D /* Sources */,
+				771E48B027A0905F000F220D /* Frameworks */,
+				771E48B127A0905F000F220D /* Resources */,
+				771E48D427A09128000F220D /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				771E48F627A0CAE6000F220D /* PBXTargetDependency */,
+			);
+			name = "LiveView-iOS";
+			productName = "LiveView-iOS";
+			productReference = 771E48B327A0905F000F220D /* LiveView-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		771E48E127A0CAE6000F220D /* LiveViewKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 771E48F927A0CAE6000F220D /* Build configuration list for PBXNativeTarget "LiveViewKit" */;
+			buildPhases = (
+				771E48DD27A0CAE6000F220D /* Headers */,
+				771E48DE27A0CAE6000F220D /* Sources */,
+				771E48DF27A0CAE6000F220D /* Frameworks */,
+				771E48E027A0CAE6000F220D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveViewKit;
+			productName = LiveViewKit;
+			productReference = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -93,6 +284,15 @@
 				TargetAttributes = {
 					771E488627A08A81000F220D = {
 						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
+					};
+					771E48B227A0905F000F220D = {
+						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
+					};
+					771E48E127A0CAE6000F220D = {
+						CreatedOnToolsVersion = 13.2;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -110,6 +310,8 @@
 			projectRoot = "";
 			targets = (
 				771E488627A08A81000F220D /* LiveView */,
+				771E48B227A0905F000F220D /* LiveView-iOS */,
+				771E48E127A0CAE6000F220D /* LiveViewKit */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +323,23 @@
 			files = (
 				771E488F27A08A83000F220D /* Assets.xcassets in Resources */,
 				771E489227A08A83000F220D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771E48B127A0905F000F220D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E48C227A09061000F220D /* LaunchScreen.storyboard in Resources */,
+				771E48BF27A09061000F220D /* Assets.xcassets in Resources */,
+				771E48BD27A0905F000F220D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771E48E027A0CAE6000F220D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +355,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		771E48AF27A0905F000F220D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E48BA27A0905F000F220D /* ViewController.swift in Sources */,
+				771E48B627A0905F000F220D /* AppDelegate.swift in Sources */,
+				771E48B827A0905F000F220D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		771E48DE27A0CAE6000F220D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771E491027A0CEE7000F220D /* LiveViewDemo.swift in Sources */,
+				771E491C27A0D477000F220D /* testlibusb.c in Sources */,
+				771E491327A0CEF9000F220D /* uvc_example.c in Sources */,
+				771E48E627A0CAE6000F220D /* LiveViewKit.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		771E48F627A0CAE6000F220D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 771E48E127A0CAE6000F220D /* LiveViewKit */;
+			targetProxy = 771E48F527A0CAE6000F220D /* PBXContainerItemProxy */;
+		};
+		771E490D27A0CE29000F220D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 771E48E127A0CAE6000F220D /* LiveViewKit */;
+			targetProxy = 771E490C27A0CE29000F220D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		771E489027A08A83000F220D /* Main.storyboard */ = {
@@ -145,6 +398,22 @@
 				771E489127A08A83000F220D /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		771E48BB27A0905F000F220D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				771E48BC27A0905F000F220D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		771E48C027A09061000F220D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				771E48C127A09061000F220D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -201,10 +470,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../libusb/libusb",
+					"$(SRCROOT)/../libuvc/include",
+					"$(SRCROOT)/../libuvc/build/include",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lusb-1.0",
+					"-ljpeg",
+					"-luvc",
+				);
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -256,9 +535,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../libusb/libusb",
+					"$(SRCROOT)/../libuvc/include",
+					"$(SRCROOT)/../libuvc/build/include",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-lusb-1.0",
+					"-ljpeg",
+					"-luvc",
+				);
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -270,6 +559,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LiveView/LiveView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -284,10 +574,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../libs/macos";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kostyshyn.LiveView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -297,6 +589,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = LiveView/LiveView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -311,11 +604,160 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../libs/macos";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kostyshyn.LiveView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		771E48C427A09061000F220D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "LiveView-iOS/LiveView.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBR2MMCRF5;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LiveView-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../libs/ios";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kostyshyn.LiveView-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		771E48C527A09061000F220D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "LiveView-iOS/LiveView.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DBR2MMCRF5;
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LiveView-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../libs/ios";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kostyshyn.LiveView-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		771E48FA27A0CAE6000F220D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DBR2MMCRF5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/../libs/ios";
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)/../libs/macos";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.kostyshyn.LiveViewKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		771E48FB27A0CAE6000F220D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = DBR2MMCRF5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LIBRARY_SEARCH_PATHS[sdk=iphoneos*]" = "$(SRCROOT)/../libs/ios";
+				"LIBRARY_SEARCH_PATHS[sdk=macosx*]" = "$(SRCROOT)/../libs/macos";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.kostyshyn.LiveViewKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -336,6 +778,24 @@
 			buildConfigurations = (
 				771E489727A08A83000F220D /* Debug */,
 				771E489827A08A83000F220D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		771E48C627A09061000F220D /* Build configuration list for PBXNativeTarget "LiveView-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				771E48C427A09061000F220D /* Debug */,
+				771E48C527A09061000F220D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		771E48F927A0CAE6000F220D /* Build configuration list for PBXNativeTarget "LiveViewKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				771E48FA27A0CAE6000F220D /* Debug */,
+				771E48FB27A0CAE6000F220D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
