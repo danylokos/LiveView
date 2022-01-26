@@ -99,7 +99,6 @@
 		771E491227A0CEF8000F220D /* uvc_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uvc_example.h; sourceTree = "<group>"; };
 		771E491927A0D477000F220D /* testlibusb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testlibusb.h; sourceTree = "<group>"; };
 		771E491A27A0D477000F220D /* testlibusb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testlibusb.c; sourceTree = "<group>"; };
-		771E491D27A0DF13000F220D /* LiveView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveView.entitlements; sourceTree = "<group>"; };
 		7722AB7527A11CFD00E81D9F /* callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
 		7722AB9227A1D51000E81D9F /* callback.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = callback.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,7 +182,6 @@
 				771E48B927A0905F000F220D /* ViewController.swift */,
 				771E48BE27A09061000F220D /* Assets.xcassets */,
 				771E48BB27A0905F000F220D /* Main.storyboard */,
-				771E491D27A0DF13000F220D /* LiveView.entitlements */,
 				771E48C027A09061000F220D /* LaunchScreen.storyboard */,
 				771E48C327A09061000F220D /* Info.plist */,
 			);
@@ -630,7 +628,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "LiveView-iOS/LiveView.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DBR2MMCRF5;
@@ -665,7 +662,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "LiveView-iOS/LiveView.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DBR2MMCRF5;
