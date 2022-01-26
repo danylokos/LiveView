@@ -24,11 +24,13 @@
 		771E490127A0CD5A000F220D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E490027A0CD5A000F220D /* CoreFoundation.framework */; };
 		771E490727A0CDD7000F220D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E490627A0CDD7000F220D /* IOKit.framework */; };
 		771E490E27A0CE2E000F220D /* LiveViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */; };
-		771E491027A0CEE7000F220D /* LiveViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E490F27A0CEE7000F220D /* LiveViewDemo.swift */; };
+		771E491027A0CEE7000F220D /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E490F27A0CEE7000F220D /* LiveView.swift */; };
 		771E491327A0CEF9000F220D /* uvc_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 771E491127A0CEF8000F220D /* uvc_example.c */; };
 		771E491427A0CEF9000F220D /* uvc_example.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491227A0CEF8000F220D /* uvc_example.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		771E491B27A0D477000F220D /* testlibusb.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491927A0D477000F220D /* testlibusb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		771E491C27A0D477000F220D /* testlibusb.c in Sources */ = {isa = PBXBuildFile; fileRef = 771E491A27A0D477000F220D /* testlibusb.c */; };
+		7722AB7627A11E7F00E81D9F /* callback.h in Headers */ = {isa = PBXBuildFile; fileRef = 7722AB7527A11CFD00E81D9F /* callback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7722AB9327A1D51000E81D9F /* callback.c in Sources */ = {isa = PBXBuildFile; fileRef = 7722AB9227A1D51000E81D9F /* callback.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,12 +94,14 @@
 		771E48E527A0CAE6000F220D /* LiveViewKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = LiveViewKit.docc; sourceTree = "<group>"; };
 		771E490027A0CD5A000F220D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		771E490627A0CDD7000F220D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		771E490F27A0CEE7000F220D /* LiveViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewDemo.swift; sourceTree = "<group>"; };
+		771E490F27A0CEE7000F220D /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
 		771E491127A0CEF8000F220D /* uvc_example.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uvc_example.c; sourceTree = "<group>"; };
 		771E491227A0CEF8000F220D /* uvc_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uvc_example.h; sourceTree = "<group>"; };
 		771E491927A0D477000F220D /* testlibusb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testlibusb.h; sourceTree = "<group>"; };
 		771E491A27A0D477000F220D /* testlibusb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testlibusb.c; sourceTree = "<group>"; };
 		771E491D27A0DF13000F220D /* LiveView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveView.entitlements; sourceTree = "<group>"; };
+		7722AB7527A11CFD00E81D9F /* callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
+		7722AB9227A1D51000E81D9F /* callback.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = callback.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,11 +193,13 @@
 		771E48E327A0CAE6000F220D /* LiveViewKit */ = {
 			isa = PBXGroup;
 			children = (
-				771E490F27A0CEE7000F220D /* LiveViewDemo.swift */,
-				771E491227A0CEF8000F220D /* uvc_example.h */,
-				771E491127A0CEF8000F220D /* uvc_example.c */,
+				771E490F27A0CEE7000F220D /* LiveView.swift */,
+				7722AB7527A11CFD00E81D9F /* callback.h */,
+				7722AB9227A1D51000E81D9F /* callback.c */,
 				771E491927A0D477000F220D /* testlibusb.h */,
 				771E491A27A0D477000F220D /* testlibusb.c */,
+				771E491227A0CEF8000F220D /* uvc_example.h */,
+				771E491127A0CEF8000F220D /* uvc_example.c */,
 				771E48E427A0CAE6000F220D /* LiveViewKit.h */,
 				771E48E527A0CAE6000F220D /* LiveViewKit.docc */,
 			);
@@ -208,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				771E491B27A0D477000F220D /* testlibusb.h in Headers */,
+				7722AB7627A11E7F00E81D9F /* callback.h in Headers */,
 				771E48F427A0CAE6000F220D /* LiveViewKit.h in Headers */,
 				771E491427A0CEF9000F220D /* uvc_example.h in Headers */,
 			);
@@ -369,10 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				771E491027A0CEE7000F220D /* LiveViewDemo.swift in Sources */,
+				771E491027A0CEE7000F220D /* LiveView.swift in Sources */,
 				771E491C27A0D477000F220D /* testlibusb.c in Sources */,
 				771E491327A0CEF9000F220D /* uvc_example.c in Sources */,
 				771E48E627A0CAE6000F220D /* LiveViewKit.docc in Sources */,
+				7722AB9327A1D51000E81D9F /* callback.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +483,7 @@
 					"$(SRCROOT)/../libuvc/include",
 					"$(SRCROOT)/../libuvc/build/include",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -540,6 +549,7 @@
 					"$(SRCROOT)/../libuvc/include",
 					"$(SRCROOT)/../libuvc/build/include",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MACOSX_DEPLOYMENT_TARGET = 11.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -632,7 +642,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,7 +677,6 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -700,7 +708,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -738,7 +745,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

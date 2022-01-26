@@ -11,6 +11,12 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#include "callback.h"
+
+#define uvc_perror(res, msg) {\
+    printf("%s: %s (%d)\n", msg, uvc_strerror(res), res);\
+    }
+
 /* This callback function runs once per frame. Use it to perform any
  * quick processing you need, or have it put the frame into your application's
  * input queue. If this function takes too long, you'll start losing frames. */
@@ -113,7 +119,7 @@ int uvc_example() {
     return res;
   }
 
-  puts("UVC initialized");
+  printf("UVC initialized\n");
 
   /* Locates the first attached UVC device, stores in dev */
   res = uvc_find_device(
@@ -123,7 +129,7 @@ int uvc_example() {
   if (res < 0) {
     uvc_perror(res, "uvc_find_device"); /* no devices found */
   } else {
-    puts("Device found");
+    printf("Device found\n");
 
     /* Try to open the device: requires exclusive access */
     res = uvc_open(dev, &devh);
@@ -131,7 +137,7 @@ int uvc_example() {
     if (res < 0) {
       uvc_perror(res, "uvc_open"); /* unable to open device */
     } else {
-      puts("Device opened");
+      printf("Device opened\n");
 
       /* Print out a message containing all the information that libuvc
        * knows about the device */
@@ -185,24 +191,24 @@ int uvc_example() {
         if (res < 0) {
           uvc_perror(res, "start_streaming"); /* unable to start stream */
         } else {
-          puts("Streaming...");
+          printf("Streaming...\n");
 
           /* enable auto exposure - see uvc_set_ae_mode documentation */
-          puts("Enabling auto exposure ...");
+          printf("Enabling auto exposure ...\n");
           const uint8_t UVC_AUTO_EXPOSURE_MODE_AUTO = 2;
           res = uvc_set_ae_mode(devh, UVC_AUTO_EXPOSURE_MODE_AUTO);
           if (res == UVC_SUCCESS) {
-            puts(" ... enabled auto exposure");
+            printf(" ... enabled auto exposure\n");
           } else if (res == UVC_ERROR_PIPE) {
             /* this error indicates that the camera does not support the full AE mode;
              * try again, using aperture priority mode (fixed aperture, variable exposure time) */
-            puts(" ... full AE not supported, trying aperture priority mode");
+            printf(" ... full AE not supported, trying aperture priority mode\n");
             const uint8_t UVC_AUTO_EXPOSURE_MODE_APERTURE_PRIORITY = 8;
             res = uvc_set_ae_mode(devh, UVC_AUTO_EXPOSURE_MODE_APERTURE_PRIORITY);
             if (res < 0) {
               uvc_perror(res, " ... uvc_set_ae_mode failed to enable aperture priority mode");
             } else {
-              puts(" ... enabled aperture priority auto exposure mode");
+              printf(" ... enabled aperture priority auto exposure mode\n");
             }
           } else {
             uvc_perror(res, " ... uvc_set_ae_mode failed to enable auto exposure mode");
@@ -212,13 +218,13 @@ int uvc_example() {
 
           /* End the stream. Blocks until last callback is serviced */
           uvc_stop_streaming(devh);
-          puts("Done streaming.");
+          printf("Done streaming.\n");
         }
       }
 
       /* Release our handle on the device */
       uvc_close(devh);
-      puts("Device closed");
+      printf("Device closed\n");
     }
 
     /* Release the device descriptor */
@@ -228,7 +234,7 @@ int uvc_example() {
   /* Close the UVC context. This closes and cleans up any existing device handles,
    * and it closes the libusb context if one was not provided. */
   uvc_exit(ctx);
-  puts("UVC exited");
+  printf("UVC exited\n");
 
   return 0;
 }
