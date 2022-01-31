@@ -25,9 +25,6 @@
 		771E490727A0CDD7000F220D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E490627A0CDD7000F220D /* IOKit.framework */; };
 		771E490E27A0CE2E000F220D /* LiveViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */; };
 		771E491027A0CEE7000F220D /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E490F27A0CEE7000F220D /* LiveView.swift */; };
-		771E491427A0CEF9000F220D /* uvc_example.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491227A0CEF8000F220D /* uvc_example.h */; };
-		771E491B27A0D477000F220D /* testlibusb.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491927A0D477000F220D /* testlibusb.h */; };
-		7722AB7627A11E7F00E81D9F /* callback.h in Headers */ = {isa = PBXBuildFile; fileRef = 7722AB7527A11CFD00E81D9F /* callback.h */; };
 		77E20A3C27A6E10100A8DE8A /* LVContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E20A3A27A6E10100A8DE8A /* LVContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77E20A3D27A6E10100A8DE8A /* LVContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E20A3B27A6E10100A8DE8A /* LVContext.m */; };
 /* End PBXBuildFile section */
@@ -94,12 +91,6 @@
 		771E490027A0CD5A000F220D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		771E490627A0CDD7000F220D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		771E490F27A0CEE7000F220D /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
-		771E491127A0CEF8000F220D /* uvc_example.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = uvc_example.c; sourceTree = "<group>"; };
-		771E491227A0CEF8000F220D /* uvc_example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uvc_example.h; sourceTree = "<group>"; };
-		771E491927A0D477000F220D /* testlibusb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testlibusb.h; sourceTree = "<group>"; };
-		771E491A27A0D477000F220D /* testlibusb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testlibusb.c; sourceTree = "<group>"; };
-		7722AB7527A11CFD00E81D9F /* callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
-		7722AB9227A1D51000E81D9F /* callback.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = callback.c; sourceTree = "<group>"; };
 		77E20A3A27A6E10100A8DE8A /* LVContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LVContext.h; sourceTree = "<group>"; };
 		77E20A3B27A6E10100A8DE8A /* LVContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,12 +186,6 @@
 				771E490F27A0CEE7000F220D /* LiveView.swift */,
 				77E20A3A27A6E10100A8DE8A /* LVContext.h */,
 				77E20A3B27A6E10100A8DE8A /* LVContext.m */,
-				7722AB7527A11CFD00E81D9F /* callback.h */,
-				7722AB9227A1D51000E81D9F /* callback.c */,
-				771E491927A0D477000F220D /* testlibusb.h */,
-				771E491A27A0D477000F220D /* testlibusb.c */,
-				771E491227A0CEF8000F220D /* uvc_example.h */,
-				771E491127A0CEF8000F220D /* uvc_example.c */,
 				771E48E427A0CAE6000F220D /* LiveViewKit.h */,
 				771E48E527A0CAE6000F220D /* LiveViewKit.docc */,
 			);
@@ -215,10 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77E20A3C27A6E10100A8DE8A /* LVContext.h in Headers */,
-				771E491B27A0D477000F220D /* testlibusb.h in Headers */,
-				7722AB7627A11E7F00E81D9F /* callback.h in Headers */,
 				771E48F427A0CAE6000F220D /* LiveViewKit.h in Headers */,
-				771E491427A0CEF9000F220D /* uvc_example.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

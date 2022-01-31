@@ -7,17 +7,6 @@
 
 import Foundation
 
-//public typealias Callback = @convention(c) (
-//    UnsafeMutablePointer<CChar>?
-//) -> Void
-//
-//// https://vmanot.com/context-capturing-c-function-pointers-in-swift
-//public func cFunction(_ block: (@escaping @convention(block) (UnsafeMutablePointer<CChar>?) -> Void)) -> Callback {
-//    return unsafeBitCast(imp_implementationWithBlock(block), to: Callback.self)
-//}
-
-//
-
 public func image(from data: UnsafePointer<UInt8>, size: (Int, Int)) -> CGImage? {
     defer {
         data.deallocate()
