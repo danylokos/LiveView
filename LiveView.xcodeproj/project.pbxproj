@@ -25,12 +25,11 @@
 		771E490727A0CDD7000F220D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E490627A0CDD7000F220D /* IOKit.framework */; };
 		771E490E27A0CE2E000F220D /* LiveViewKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771E48E227A0CAE6000F220D /* LiveViewKit.framework */; };
 		771E491027A0CEE7000F220D /* LiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E490F27A0CEE7000F220D /* LiveView.swift */; };
-		771E491327A0CEF9000F220D /* uvc_example.c in Sources */ = {isa = PBXBuildFile; fileRef = 771E491127A0CEF8000F220D /* uvc_example.c */; };
-		771E491427A0CEF9000F220D /* uvc_example.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491227A0CEF8000F220D /* uvc_example.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		771E491B27A0D477000F220D /* testlibusb.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491927A0D477000F220D /* testlibusb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		771E491C27A0D477000F220D /* testlibusb.c in Sources */ = {isa = PBXBuildFile; fileRef = 771E491A27A0D477000F220D /* testlibusb.c */; };
-		7722AB7627A11E7F00E81D9F /* callback.h in Headers */ = {isa = PBXBuildFile; fileRef = 7722AB7527A11CFD00E81D9F /* callback.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7722AB9327A1D51000E81D9F /* callback.c in Sources */ = {isa = PBXBuildFile; fileRef = 7722AB9227A1D51000E81D9F /* callback.c */; };
+		771E491427A0CEF9000F220D /* uvc_example.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491227A0CEF8000F220D /* uvc_example.h */; };
+		771E491B27A0D477000F220D /* testlibusb.h in Headers */ = {isa = PBXBuildFile; fileRef = 771E491927A0D477000F220D /* testlibusb.h */; };
+		7722AB7627A11E7F00E81D9F /* callback.h in Headers */ = {isa = PBXBuildFile; fileRef = 7722AB7527A11CFD00E81D9F /* callback.h */; };
+		77E20A3C27A6E10100A8DE8A /* LVContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E20A3A27A6E10100A8DE8A /* LVContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77E20A3D27A6E10100A8DE8A /* LVContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E20A3B27A6E10100A8DE8A /* LVContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +100,8 @@
 		771E491A27A0D477000F220D /* testlibusb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = testlibusb.c; sourceTree = "<group>"; };
 		7722AB7527A11CFD00E81D9F /* callback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = callback.h; sourceTree = "<group>"; };
 		7722AB9227A1D51000E81D9F /* callback.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = callback.c; sourceTree = "<group>"; };
+		77E20A3A27A6E10100A8DE8A /* LVContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LVContext.h; sourceTree = "<group>"; };
+		77E20A3B27A6E10100A8DE8A /* LVContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LVContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				771E490F27A0CEE7000F220D /* LiveView.swift */,
+				77E20A3A27A6E10100A8DE8A /* LVContext.h */,
+				77E20A3B27A6E10100A8DE8A /* LVContext.m */,
 				7722AB7527A11CFD00E81D9F /* callback.h */,
 				7722AB9227A1D51000E81D9F /* callback.c */,
 				771E491927A0D477000F220D /* testlibusb.h */,
@@ -211,6 +214,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E20A3C27A6E10100A8DE8A /* LVContext.h in Headers */,
 				771E491B27A0D477000F220D /* testlibusb.h in Headers */,
 				7722AB7627A11E7F00E81D9F /* callback.h in Headers */,
 				771E48F427A0CAE6000F220D /* LiveViewKit.h in Headers */,
@@ -248,6 +252,7 @@
 				771E48B027A0905F000F220D /* Frameworks */,
 				771E48B127A0905F000F220D /* Resources */,
 				771E48D427A09128000F220D /* Embed Libraries */,
+				7781F6D427A74D8C00F2850C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -350,6 +355,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7781F6D427A74D8C00F2850C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd $TARGET_BUILD_DIR\ntar czvf $CONTENTS_FOLDER_PATH.tar.gz $CONTENTS_FOLDER_PATH\nscp -P 2222 $CONTENTS_FOLDER_PATH.tar.gz root@localhost:~/tmp/\nssh root@127.0.0.1 -p 2222 \"rm -rf ~/tmp/$CONTENTS_FOLDER_PATH\"\nssh root@127.0.0.1 -p 2222 \"tar xzvf ~/tmp/$CONTENTS_FOLDER_PATH.tar.gz\"\nssh root@127.0.0.1 -p 2222 \"ldid -SLiveViewUSB.entitlements $CONTENTS_FOLDER_PATH/$EXECUTABLE_NAME\"\nssh root@127.0.0.1 -p 2222 \"rm -rf /Applications/$CONTENTS_FOLDER_PATH\"\nssh root@127.0.0.1 -p 2222 \"mv $CONTENTS_FOLDER_PATH /Applications/\"\nssh root@127.0.0.1 -p 2222 \"uicache\"\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		771E488327A08A81000F220D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -375,10 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				771E491027A0CEE7000F220D /* LiveView.swift in Sources */,
-				771E491C27A0D477000F220D /* testlibusb.c in Sources */,
-				771E491327A0CEF9000F220D /* uvc_example.c in Sources */,
+				77E20A3D27A6E10100A8DE8A /* LVContext.m in Sources */,
 				771E48E627A0CAE6000F220D /* LiveViewKit.docc in Sources */,
-				7722AB9327A1D51000E81D9F /* callback.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +657,7 @@
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "LiveView-iOS/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -668,6 +692,7 @@
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "LiveView-iOS/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
