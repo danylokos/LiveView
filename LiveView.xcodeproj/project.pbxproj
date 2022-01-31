@@ -353,7 +353,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd $TARGET_BUILD_DIR\ntar czvf $CONTENTS_FOLDER_PATH.tar.gz $CONTENTS_FOLDER_PATH\nscp -P 2222 $CONTENTS_FOLDER_PATH.tar.gz root@localhost:~/tmp/\nssh root@127.0.0.1 -p 2222 \"rm -rf ~/tmp/$CONTENTS_FOLDER_PATH\"\nssh root@127.0.0.1 -p 2222 \"tar xzvf ~/tmp/$CONTENTS_FOLDER_PATH.tar.gz\"\nssh root@127.0.0.1 -p 2222 \"ldid -SLiveViewUSB.entitlements $CONTENTS_FOLDER_PATH/$EXECUTABLE_NAME\"\nssh root@127.0.0.1 -p 2222 \"rm -rf /Applications/$CONTENTS_FOLDER_PATH\"\nssh root@127.0.0.1 -p 2222 \"mv $CONTENTS_FOLDER_PATH /Applications/\"\nssh root@127.0.0.1 -p 2222 \"uicache\"\n\n";
+			shellScript = "# Create .deb package\n\nversion=1.0\nbuildno=1\n\nPKG_ID=org.kostyshyn.LiveView\nPKG_NAME=$PKG_ID-$version-$buildno.deb\nDPKG_DIR=$TARGET_BUILD_DIR/dpkg\nAPP_BUNDLE=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\nENTITLEMENTS=$SRCROOT/LiveView-iOS/LiveViewUSB.entitlements\n\n# sign\nldid -S$ENTITLEMENTS $APP_BUNDLE/$EXECUTABLE_NAME\n\n# copy\nrm -rf $DPKG_DIR\nmkdir -p $DPKG_DIR/$PKG_ID/{DEBIAN,Applications}\ncat $SRCROOT/LiveView-iOS/control | sed \"s/Version: PLACEHOLDER/Version: $version-$buildno/\" > $DPKG_DIR/$PKG_ID/DEBIAN/control\ncp -r $APP_BUNDLE $DPKG_DIR/$PKG_ID/Applications/ \n\n# create deb\ncd $DPKG_DIR\ndpkg-deb -Zgzip -b $PKG_ID $TARGET_BUILD_DIR/$PKG_NAME\n\n# install\n#scp -P 2222 $TARGET_BUILD_DIR/$PKG_NAME root@localhost:~/\n#ssh root@localhost -p 2222 \"dpkg -i $PKG_NAME && uicache\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

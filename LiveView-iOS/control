@@ -1,0 +1,10 @@
+Package: org.kostyshyn.LiveView
+Name: LiveView
+Depends: firmware(>=14.0)
+Version: PLACEHOLDER
+Architecture: iphoneos-arm
+Author: Danylo Kostyshyn
+Maintainer: Danylo Kostyshyn
+Section: Utilities
+Description: Demo app that uses IOKit (libusb, libvnc) to interact with USB camera on a jailbroken iPhone
+Homepage: https://github.com/danylokos/LiveView
