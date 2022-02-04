@@ -27,24 +27,43 @@ class ViewController: NSViewController {
         configureViews()
         context.start()
     }
-        
+    
+    func configureButtonsView() -> NSView {
+        let buttonConfigs = [
+            ("arrow.clockwise.circle", #selector(reload(_:))),
+            ("command.circle", #selector(changeFrameDesc(_:))),
+        ]
+        let buttons: [NSButton] = buttonConfigs.map { (iconName, sel) in
+            let image = NSImage(systemSymbolName: iconName, accessibilityDescription: nil)!
+            let button = NSButton(image: image, target: self, action: sel)
+            return button
+        }
+        let stackView = NSStackView(views: buttons)
+        return stackView
+    }
+    
     func configureViews() {
+        let buttonsContainer = configureButtonsView()
+        
         textView.textColor = NSColor.textColor
         
         view.addSubview(scrollView)
         view.addSubview(imageView)
+        view.addSubview(buttonsContainer)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        buttonsContainer.translatesAutoresizingMaskIntoConstraints = false
         let constraints = [
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-//            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             imageView.leadingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             imageView.topAnchor.constraint(equalTo: view.topAnchor),
             imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            buttonsContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 5.0),
+            buttonsContainer.topAnchor.constraint(equalTo: view.topAnchor, constant: 5.0)
         ]
         NSLayoutConstraint.activate(constraints)
     }
@@ -53,6 +72,19 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+
+}
+
+extension ViewController {
+
+    @objc func reload(_ sender: NSButton) {
+        context.reload()
+    }
+
+    @objc func changeFrameDesc(_ sender: NSButton) {
+        let frameDesc = LVFrameDesc(width: 1920, height: 1080, fps: 30)
+        context.change(frameDesc)
     }
 
 }
@@ -75,6 +107,13 @@ extension ViewController: LVContextDelegate {
         print(str, terminator: "")
         DispatchQueue.main.async {
             self.appendLog(str)
+        }
+    }
+    
+    func context(_ context: LVContext, didUpdateFrameDescriptions frameDescs: UnsafeMutablePointer<LVFrameDesc>, count: UInt8) {
+        let frameDescs = (0..<Int(count)).map { frameDescs[$0] }
+        frameDescs.forEach {
+            print("\($0.width)x\($0.height) @ \($0.fps)fps")
         }
     }
     
