@@ -45,7 +45,6 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // start alerts loop
         [self uvcInit];
     }
     return self;
@@ -69,13 +68,21 @@
     if (ctx) {
         [self uvcDeinit];
     }
+    
+    // clear-out the vars
+    ctx = NULL;
+    dev = NULL;
+    devh = NULL;
+    
     [self uvcInit];
     [self start];
 }
 
 - (void)changeFrameDesc:(LVFrameDesc)frameDesc {
-    [self uvcStopStreaming];
-    [self uvcStartStreamingWithFrameDesc:frameDesc];
+    if (devh) {
+        [self uvcStopStreaming];
+        [self uvcStartStreamingWithFrameDesc:frameDesc];
+    }
 }
 
 - (int)uvcInit {
@@ -120,12 +127,23 @@
     return 0;
 }
 
-- (int)uvcGetFrameDescriptors {
-    // Select uncompressed format
+- (const uvc_format_desc_t *)uvcGetUncompressedFormatDesc {
     const uvc_format_desc_t *format_desc = uvc_get_format_descs(devh);
     while (format_desc && format_desc->bDescriptorSubtype != UVC_VS_FORMAT_UNCOMPRESSED) {
         format_desc = format_desc->next;
     }
+    
+    if (format_desc == NULL) {
+        printf("Can't find uncompressed format\n");
+        return NULL;
+    }
+    
+    return format_desc;
+}
+
+- (int)uvcGetFrameDescriptors {
+    // Select uncompressed format
+    const uvc_format_desc_t *format_desc = [self uvcGetUncompressedFormatDesc];
     
     // format_desc->bNumFrameDescriptors returns 0
     uint8_t bNumFrameDescriptors = 0;
@@ -149,20 +167,6 @@
     [self.delegate context:self didUpdateFrameDescriptions:frameDescs count:bNumFrameDescriptors];
     
     return 0;
-}
-
-- (const uvc_format_desc_t *)uvcGetUncompressedFormatDesc {
-    const uvc_format_desc_t *format_desc = uvc_get_format_descs(devh);
-    while (format_desc && format_desc->bDescriptorSubtype != UVC_VS_FORMAT_UNCOMPRESSED) {
-        format_desc = format_desc->next;
-    }
-    
-    if (format_desc == NULL) {
-        printf("Can't find uncompressed format\n");
-        return NULL;
-    }
-    
-    return format_desc;
 }
 
 - (int)uvcStartStreaming {
