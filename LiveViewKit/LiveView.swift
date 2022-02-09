@@ -27,8 +27,8 @@ public func image(from data: UnsafePointer<UInt8>, size: (Int, Int)) -> CGImage?
             bitmapInfo: CGBitmapInfo(rawValue: 0),
             provider: provider,
             decode: nil,
-            shouldInterpolate: true,
-            intent: CGColorRenderingIntent.defaultIntent
+            shouldInterpolate: false,
+            intent: .defaultIntent
         ) else { return nil }
     return imageRef
 }
