@@ -14,7 +14,6 @@
 		771E48B627A0905F000F220D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E48B527A0905F000F220D /* AppDelegate.swift */; };
 		771E48B827A0905F000F220D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E48B727A0905F000F220D /* SceneDelegate.swift */; };
 		771E48BA27A0905F000F220D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771E48B927A0905F000F220D /* ViewController.swift */; };
-		771E48BD27A0905F000F220D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771E48BB27A0905F000F220D /* Main.storyboard */; };
 		771E48BF27A09061000F220D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 771E48BE27A09061000F220D /* Assets.xcassets */; };
 		771E48C227A09061000F220D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 771E48C027A09061000F220D /* LaunchScreen.storyboard */; };
 		771E48E627A0CAE6000F220D /* LiveViewKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 771E48E527A0CAE6000F220D /* LiveViewKit.docc */; };
@@ -81,7 +80,6 @@
 		771E48B527A0905F000F220D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		771E48B727A0905F000F220D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		771E48B927A0905F000F220D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		771E48BC27A0905F000F220D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		771E48BE27A09061000F220D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		771E48C127A09061000F220D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		771E48C327A09061000F220D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				771E48B727A0905F000F220D /* SceneDelegate.swift */,
 				771E48B927A0905F000F220D /* ViewController.swift */,
 				771E48BE27A09061000F220D /* Assets.xcassets */,
-				771E48BB27A0905F000F220D /* Main.storyboard */,
 				771E48C027A09061000F220D /* LaunchScreen.storyboard */,
 				771E48C327A09061000F220D /* Info.plist */,
 			);
@@ -324,7 +321,6 @@
 			files = (
 				771E48C227A09061000F220D /* LaunchScreen.storyboard in Resources */,
 				771E48BF27A09061000F220D /* Assets.xcassets in Resources */,
-				771E48BD27A0905F000F220D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Create .deb package\n\nversion=1.0\nbuildno=1\n\nPKG_ID=org.kostyshyn.LiveView\nPKG_NAME=$PKG_ID-$version-$buildno.deb\nDPKG_DIR=$TARGET_BUILD_DIR/dpkg\nAPP_BUNDLE=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\nENTITLEMENTS=$SRCROOT/LiveView-iOS/LiveViewUSB.entitlements\n\n# sign\nldid -S$ENTITLEMENTS $APP_BUNDLE/$EXECUTABLE_NAME\n\n# copy\nrm -rf $DPKG_DIR\nmkdir -p $DPKG_DIR/$PKG_ID/{DEBIAN,Applications}\ncat $SRCROOT/LiveView-iOS/control | sed \"s/Version: PLACEHOLDER/Version: $version-$buildno/\" > $DPKG_DIR/$PKG_ID/DEBIAN/control\ncp -r $APP_BUNDLE $DPKG_DIR/$PKG_ID/Applications/ \n\n# create deb\ncd $DPKG_DIR\ndpkg-deb -Zgzip -b $PKG_ID $TARGET_BUILD_DIR/$PKG_NAME\n\n# install\n#scp -P 2222 $TARGET_BUILD_DIR/$PKG_NAME root@localhost:~/\n#ssh root@localhost -p 2222 \"dpkg -i $PKG_NAME && uicache\"\n";
+			shellScript = "# Create .deb package\n\nversion=1.0\nbuildno=1\n\nPKG_ID=org.kostyshyn.LiveView\nPKG_NAME=$PKG_ID-$version-$buildno.deb\nDPKG_DIR=$TARGET_BUILD_DIR/dpkg\nAPP_BUNDLE=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\nENTITLEMENTS=$SRCROOT/LiveView-iOS/LiveViewUSB.entitlements\n\n# sign\nldid -S$ENTITLEMENTS $APP_BUNDLE/$EXECUTABLE_NAME\n\n# copy\nrm -rf $DPKG_DIR\nmkdir -p $DPKG_DIR/$PKG_ID/{DEBIAN,Applications}\ncat $SRCROOT/LiveView-iOS/debian/control | sed \"s/Version: PLACEHOLDER/Version: $version-$buildno/\" > $DPKG_DIR/$PKG_ID/debian/control\ncp -r $APP_BUNDLE $DPKG_DIR/$PKG_ID/Applications/ \n\n# create deb\ncd $DPKG_DIR\ndpkg-deb -Zgzip -b $PKG_ID $TARGET_BUILD_DIR/$PKG_NAME\n\n# install\n#scp -P 2222 $TARGET_BUILD_DIR/$PKG_NAME root@localhost:~/\n#ssh root@localhost -p 2222 \"dpkg -i $PKG_NAME && uicache\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -407,14 +403,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				771E489127A08A83000F220D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		771E48BB27A0905F000F220D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				771E48BC27A0905F000F220D /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -620,7 +608,6 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,7 +641,6 @@
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save photo";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -6,5 +6,5 @@ Architecture: iphoneos-arm
 Author: Danylo Kostyshyn
 Maintainer: Danylo Kostyshyn
 Section: Utilities
-Description: Demo app that uses IOKit (libusb, libvnc) to interact with USB camera on a jailbroken iPhone
+Description: Demo app that uses IOKit (libusb, libvnc) to interact with a USB camera on a jailbroken iPhone
 Homepage: https://github.com/danylokos/LiveView
